@@ -1,0 +1,11 @@
+{
+    "safe_ports": "T:1-8802,8808-20000,U:53,123",
+    "full_ports": "T:1-65535,U:53,123",
+    "targets": [
+        {
+            "name": "Sample network",
+            "cidr": "192.168.123.0/24",
+            "port_list": "safe_ports"
+        }
+    ]
+}
