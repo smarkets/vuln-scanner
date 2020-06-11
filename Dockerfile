@@ -1,10 +1,11 @@
-FROM kalilinux/kali-linux-docker:latest
+FROM kalilinux/kali-rolling:latest
 
 # We do NOT delete apt state files between runs. Only packages.
 # See below for more detailed reasoning.
 # hadolint ignore=DL3005,DL3009
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
+    wget curl rsync \
     bzip2 nmap pnscan x42-plugins ike-scan \
     openvas-scanner openvas-manager \
     openvas-manager-common openvas-cli \
